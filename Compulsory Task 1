@@ -1,0 +1,27 @@
+# programme determines the award a person competing in a triathlon will recieve
+
+# user must input their times for each event
+print("Please enter your times (in minutes) for each of the following events: ")
+event1 = input("Swimming: ")
+event2 = input("Cycling: ")
+event3 = input("Running: ")
+
+# calculate and display total time it has taken user to complete the triathlon
+total_time = int(event1) + int(event2) + int(event3)
+print("Your total time is", total_time)
+
+# variable
+qualifying_time = 100
+
+# print the award that the user will recieve based on their total time
+if total_time <= qualifying_time:
+    print("You will recieve the Provincial Colours Award.")
+
+elif (total_time > 100) and (total_time <= 105):
+    print("You will recieve the Provincial Half Colours Award.")
+
+elif (total_time > 105) and (total_time <= 110):
+    print("You will recieve the Provincial Scroll Award.")
+
+elif total_time > 111:
+    print("You will not recieve an award.")
